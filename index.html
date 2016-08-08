@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="utf-8"/>
+  <title>Beverage Chart</title>
+     <script type="text/javascript" src="js/axis.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+  <script type="text/javascript" src="js/libraryFile.js"></script>
+   <script type="text/javascript" src="js/parsing.js"></script>
+</head>
+<body>
+  <div id="container"></div>
+
+  
+  <script type="text/javascript">
+
+
+   var xmlhttp= new XMLHttpRequest(),mychart;
+     xmlhttp.onreadystatechange = function(){   
+       if ( xmlhttp.readyState === 4 && xmlhttp.status === 200 ) {
+         mychart = new RenderChart(500,500,JSON.parse(xmlhttp.responseText));
+         mychart.calSumTotal();
+       }
+ };
+ xmlhttp.open('GET','data/bev2.json',true);
+ xmlhttp.send();
+  </script>
+</body>
+</html>

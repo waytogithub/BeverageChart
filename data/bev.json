@@ -1,0 +1,112 @@
+{
+ "chart":{
+"caption":"Beverage Chart",
+"subcaption":"Profit and Sales"
+ },
+"data":[{              
+  "productType":"Coffee",
+  "values":[{
+   "product":"Amaretto",
+   "central":{"Prof":"$10200","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Columbian",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Decaf Irish Cream",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   }
+  ]
+},
+ {
+ "productType":"Espresso",
+ "values":[{
+   "product":"Caffe Latte",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Caffe Mocha",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Decaf Espresso",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Regular Espresso",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   }
+]
+},
+{
+ "productType":"Herbal Tea",
+ "values":[{
+   "product":"Chamomile",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Lemon",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Mint",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   }
+  ]
+ 
+ },
+ {
+ "productType":"Tea",
+ "values":[{
+   "product":"Darjeeling",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"East Grey",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   },
+   {"product":"Green Tea",
+   "central":{"Prof":"$5105","Sales":"$14011"},
+   "east":{"Prof":"$5105","Sales":"$14011"},
+   "west":{"Prof":"$5105","Sales":"$14011"},
+   "south":{"Prof":"$5105","Sales":"$14011"}
+   }
+  ]
+ }
+] 
+}
+  
+ 
+ 
+
+
+ 
