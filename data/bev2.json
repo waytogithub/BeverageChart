@@ -12,18 +12,18 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":"$4000",
-                     "sos":"$25000"
+                     "sop":4000,
+                     "sos":10000
                   },
                   {
                      "product":"Columbian",
-                     "sop":"$1000",
-                     "sos":"$12000"
+                     "sop":1000,
+                     "sos":12000
                   },
                   {
                      "product":"Decaf Irish Cream",
-                     "sop":"$2105",
-                     "sos":"$14011"
+                     "sop":2105,
+                     "sos":14011
                   }
                ]
             },
@@ -32,18 +32,18 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":"$10105",
-                     "sos":"$17000"
+                     "sop":10105,
+                     "sos":17000
                   },
                   {
                      "product":"Columbian",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Decaf Irish Cream",
-                     "sop":"$4105",
-                     "sos":"$14011"
+                     "sop":4105,
+                     "sos":4011
                   }
                ]
             },
@@ -52,18 +52,18 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":"$10105",
-                     "sos":"$4011"
+                     "sop":10105,
+                     "sos":4011
                   },
                   {
                      "product":"Columbian",
-                     "sop":"$8105",
-                     "sos":"$14011"
+                     "sop":8105,
+                     "sos":4011
                   },
                   {
                      "product":"Decaf Irish Cream",
-                     "sop":"$5105",
-                     "sos":"$4011"
+                     "sop":5105,
+                     "sos":4011
                   }
                ]
             },
@@ -72,18 +72,18 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":"$5105",
-                     "sos":"$4011"
+                     "sop":5105,
+                     "sos":4011
                   },
                   {
                      "product":"Columbian",
-                     "sop":"$5105",
-                     "sos":"$4011"
+                     "sop":5105,
+                     "sos":4011
                   },
                   {
                      "product":"Decaf Irish Cream",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             }
@@ -97,23 +97,23 @@
                "data":[
                   {
                      "product":"Caffe Latto",
-                     "sop":"$5105",
-                     "sos":"$20000"
+                     "sop":5105,
+                     "sos":20000
                   },
                   {
                      "product":"Caffe Mocha",
-                     "sop":"$5000",
-                     "sos":"$6000"
+                     "sop":5000,
+                     "sos":6000
                   },
                   {
                      "product":"Decaf Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Regular Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -122,23 +122,23 @@
                "data":[
                   {
                      "product":"Caffe Latto",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Caffe Mocha",
-                     "sop":"$9000",
-                     "sos":"$8000"
+                     "sop":9000,
+                     "sos":8000
                   },
                   {
                      "product":"Decaf Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Regular Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -147,23 +147,23 @@
                "data":[
                   {
                      "product":"Caffe Latto",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Caffe Mocha",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Decaf Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Regular Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -172,23 +172,23 @@
                "data":[
                   {
                      "product":"Caffe Latto",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":1000
                   },
                   {
                      "product":"Caffe Mocha",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Decaf Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Regular Espresso",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             }
@@ -202,18 +202,18 @@
                "data":[
                   {
                      "product":"Chamomite",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Lemon",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":25105,
+                     "sos":14011
                   },
                   {
                      "product":"Mint",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":10105,
+                     "sos":14011
                   }
                ]
             },
@@ -222,18 +222,18 @@
                "data":[
                   {
                      "product":"Chamomoite",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":15105,
+                     "sos":4011
                   },
                   {
                      "product":"Lemon",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Mint",
-                     "sop":"$5105",
-                     "sos":"$2000"
+                     "sop":10105,
+                     "sos":9000
                   }
                ]
             },
@@ -242,18 +242,18 @@
                "data":[
                   {
                      "product":"Chamomoite",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":-10105,
+                     "sos":14011
                   },
                   {
                      "product":"Lemon",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5108,
+                     "sos":14011
                   },
                   {
                      "product":"Mint",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -262,18 +262,18 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Columbian",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":-20105,
+                     "sos":14011
                   },
                   {
                      "product":"Decaf Irish Cream",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             }
@@ -287,18 +287,18 @@
                "data":[
                   {
                      "product":"Darjeeling",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":-15105,
+                     "sos":14011
                   },
                   {
                      "product":"East Grey",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Green Tea",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":4011
                   }
                ]
             },
@@ -307,18 +307,18 @@
                "data":[
                   {
                      "product":"Darjeeling",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"East Grey",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Green Tea",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -327,18 +327,18 @@
                "data":[
                   {
                      "product":"Darjeeling",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"East Grey",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Green Tea",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   }
                ]
             },
@@ -347,18 +347,18 @@
                "data":[
                   {
                      "product":"Darjeeling",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"East Grey",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":5105,
+                     "sos":14011
                   },
                   {
                      "product":"Green Tea",
-                     "sop":"$5105",
-                     "sos":"$14011"
+                     "sop":-5105,
+                     "sos":14011
                   }
                ]
             }

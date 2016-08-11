@@ -2,7 +2,7 @@ function RenderChart(chartHeight,chartWidth,chartData){
 this.chartHeight=chartHeight;
 this.chartWidth=chartWidth;
 this.chartData=chartData;
-
+//console.log(getVal(this.chartData,"Espresso","East","Caffe Mocha"));
 }
 
 RenderChart.prototype.calSumTotal = function(chartData) {
@@ -111,7 +111,7 @@ for(var k=0;k<chartData.dataset.length;k++){
 var line=new Axes(url);
 line.createLines(svg,0,0,0,110,"stroke:#000000");
 line.createLines(svg,0,0,svgWidth,0,"stroke:#000000");
-line.createLines(svg,0,110,150,110,"stroke:#000000"); 
+line.createLines(svg,0,svgHeight,svgWidth,svgHeight,"stroke:#000000"); 
 var text=new Axes(url);
 text.createText(svg,margin+40,margin+60,chartData.dataset[k].productType,"blue");
 //console.log((chartData.dataset[k].values.length)+1);
@@ -123,7 +123,7 @@ for(var j=0;j<(chartData.dataset[k].values.length)+1;j++){
 var line=new Axes(url);
 line.createLines(svg,margin,0,margin,110,"stroke:#000000");
 line.createLines(svg,0,0,svgWidth,0,"stroke:#000000");
-line.createLines(svg,0,110,150,110,"stroke:#000000"); 
+line.createLines(svg,0,110,svgWidth,svgHeight,"stroke:#000000"); 
 if((j==(chartData.dataset[k].values.length)))
 line.createLines(svg,svgWidth,0,svgWidth,svgHeight,"stroke:#000000");    
 if(k==0 && j>0){
