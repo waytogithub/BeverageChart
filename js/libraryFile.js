@@ -2,7 +2,7 @@ function RenderChart(chartHeight,chartWidth,chartData){
 this.chartHeight=chartHeight;
 this.chartWidth=chartWidth;
 this.chartData=chartData;
-//console.log(getVal(this.chartData,"Espresso","East","Caffe Mocha"));
+
 }
 
 RenderChart.prototype.calSumTotal = function(chartData) {
