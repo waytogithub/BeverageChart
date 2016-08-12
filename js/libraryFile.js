@@ -111,7 +111,7 @@ var canvas=new Canvas(url);
 var svg=canvas.createSvg(150,40);
 divId.appendChild(svg);
 if(i==0)
-canvas.createText(svg,8*margin,3*margin,"Product Type","blue",13);
+canvas.createText(svg,7*margin,3*margin,"Product Type","blue",13);
 if(i>1)
 canvas.createLines(svg,margin,10,margin,40,"stroke:#000000");
 if(i==1)
