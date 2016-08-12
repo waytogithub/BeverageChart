@@ -2,7 +2,7 @@ function RenderChart(chartHeight,chartWidth,chartData){
 this.chartHeight=chartHeight;
 this.chartWidth=chartWidth;
 this.chartData=chartData;
-//console.log(getVal(this.chartData,"Espresso","East","Caffe Mocha"));
+
 }
 
 RenderChart.prototype.calSumTotal = function(chartData) {
@@ -37,8 +37,8 @@ render(this.chartData,this.chartHeight,this.chartWidth,maxSopSos.maxSos);
 
 }
 function getMaxSopSos(chartData){
-   var maxSopPos,maxSopNeg=-Infinity;
-   //console.log
+   var maxSopPos,maxSopNeg=(-Infinity);
+   
     
     maxSopPos=chartData.dataset[0].values[0].data[0].sop;
     
@@ -67,11 +67,10 @@ function getMaxSopSos(chartData){
         }
       }
    }
-console.log(maxSopPos,maxSopNeg);  
+
 return {"maxSopPos":maxSopPos,"maxSopNeg":maxSopNeg,"maxSos":maxSos};
 }
 function getShade(val,maxSopPos,maxSopNeg){
-//console.log(maxSopNeg);
 if(val>0){
  if(val<=(maxSopPos/4))
     return "#7e7e7e";
@@ -99,53 +98,66 @@ function render(chartData,chartHeight,chartWidth,maxSos){
 
 var svgHeight=110; 
 var svgWidth=150;
-var gap=2;
-var margin=6;
+var gap=5;
+var margin=10;
+var rectHeight=20;
 var divisionX=svgWidth/maxSos;
 var url = "http://www.w3.org/2000/svg";
 var divId=document.getElementById("container");
-for(var k=0;k<chartData.dataset.length;k++){
-     var canvas=new Canvas(url);
-    var svg=canvas.createSvg(svgWidth,svgHeight,url,divId);
-    divId.appendChild(svg);
-var line=new Canvas(url);
-canvas.createLines(svg,0,0,0,110,"stroke:#000000");
-canvas.createLines(svg,0,0,svgWidth,0,"stroke:#000000");
-canvas.createLines(svg,0,svgHeight,svgWidth,svgHeight,"stroke:#000000"); 
-var text=new Canvas(url);
-text.createText(svg,margin+40,margin+60,chartData.dataset[k].productType,"blue");
-//console.log((chartData.dataset[k].values.length)+1);
-for(var j=0;j<(chartData.dataset[k].values.length)+1;j++){
 var canvas=new Canvas(url);
-var svg=canvas.createSvg(svgWidth,svgHeight,url,divId);
+//console.log((chartData.dataset[k].values.length)+1);
+for(var i=0;i<(chartData.dataset[0].values.length)+2;i++){
+var canvas=new Canvas(url);
+var svg=canvas.createSvg(150,40);
 divId.appendChild(svg);
-canvas.createLines(svg,margin,0,margin,110,"stroke:#000000");
+if(i==0)
+canvas.createText(svg,8*margin,3*margin,"Product Type","blue");
+if(i>1)
+canvas.createLines(svg,margin,10,margin,40,"stroke:#000000");
+if(i==1)
+canvas.createText(svg,10*margin,3*margin,"Product","blue"); 
+if(i>1){
+canvas.createText(svg,5*margin,3*margin,chartData.dataset[0].values[i-2].zone,"blue");
+}
+}
+
+
+
+for(var k=0;k<((chartData.dataset.length));k++){
+// console.log(k);   
+
+
+for(var j=0;j<(chartData.dataset[k].values.length)+2;j++){
+var canvas=new Canvas(url);
+var svgHeight=(rectHeight*(chartData.dataset[k].values[0].data.length))+(2*margin)+((chartData.dataset[k].values[0].data.length)-1)*gap;
+var svg=canvas.createSvg(svgWidth,svgHeight);
+divId.appendChild(svg);
 canvas.createLines(svg,0,0,svgWidth,0,"stroke:#000000");
-canvas.createLines(svg,0,110,svgWidth,svgHeight,"stroke:#000000"); 
-if((j==(chartData.dataset[k].values.length)))
-line.createLines(svg,svgWidth,0,svgWidth,svgHeight,"stroke:#000000");    
-if(k==0 && j>0){
+if(j>0)
+canvas.createLines(svg,margin,0,margin,svgHeight,"stroke:#000000");
+canvas.createLines(svg,0,svgHeight,svgWidth,svgWidth,"stroke:#000000"); 
+if((j==(chartData.dataset[k].values.length)+1))
+canvas.createLines(svg,svgWidth,0,svgWidth,svgHeight,"stroke:#000000");
+if((k==chartData.dataset.length)-1)
+canvas.createLines(svg,0,svgHeight,svgWidth,svgHeight,"stroke:#000000");    
+if(j==0 ){
 var text=new Canvas(url);
-text.createText(svg,50,10,chartData.dataset[k].values[j-1].zone,"blue");
- }
-if(j==0){
-  if(k==0){  
-  var text=new Canvas(url);
-  text.createText(svg,0,0,"Product","blue");  
-  }
+text.createText(svg,50,50,chartData.dataset[k].productType,"blue");
+}
+ 
+if(j==1){
 for(var n=0;n<chartData.dataset[k].values[j].data.length;n++){  
 var text=new Canvas(url);
-var divY=(100-margin)/(chartData.dataset[k].values[j].data.length);
-text.createText(svg,margin+80,margin+20+(divY*n),chartData.dataset[k].values[j].data[n].product,"blue");
+var divY=(svgHeight/(chartData.dataset[k].values[j].data.length));
+text.createText(svg,margin+80,(2*margin)+(divY*n),chartData.dataset[k].values[j].data[n].product,"blue");
 }
 }
-else{
- //zone
- var divisionY=(svgHeight/(chartData.dataset[k].values[j-1].data.length));
- for(var i=0;i<chartData.dataset[k].values[j-1].data.length;i++){
- var sosVal=chartData.dataset[k].values[j-1].data[i].sos;
- var sopVal=chartData.dataset[k].values[j-1].data[i].sop;
- console.log(sopVal);
+
+if(j>1){
+ for(var i=0;i<chartData.dataset[k].values[j-2].data.length;i++){
+ var sosVal=chartData.dataset[k].values[j-2].data[i].sos;
+ var sopVal=chartData.dataset[k].values[j-2].data[i].sop;
+ //console.log(sopVal);
  var maxSopSos=getMaxSopSos(chartData);
  
  var maxSopPos=maxSopSos.maxSopPos;
@@ -153,16 +165,37 @@ else{
  var col=getShade(sopVal,maxSopPos,maxSopNeg); 
  
  var width=divisionX*sosVal;
- 
-
-
-var canvas=new Canvas(url);  
-canvas.createRectangle(svg,divisionY-((chartData.dataset[k].values[j-1].data.length-1)*gap)-(2*(margin)),width,margin,(divisionY*i)+(margin+5),col);
-
+ var canvas=new Canvas(url);  
+canvas.createRectangle(svg,rectHeight,width,margin,(rectHeight*i)+margin+(gap*i),col);
+}
 
  }
 }
+
+}
+for(var i=0;i<(chartData.dataset[0].values.length)+2;i++){
+var canvas=new Canvas(url);
+var svg=canvas.createSvg(150,40);
+divId.appendChild(svg);
+if(i>1)
+canvas.createLines(svg,margin,0,margin,30,"stroke:#000000");
+console.log(maxSos);
+console.log(divisionX);
+console.log((maxSos/4));
+if(i>1){
+for(var k=0;k<3;k++){
+canvas.createLines(svg,margin+(150/4)*(k+1),0,margin+(150/4)*(k+1),5,"stroke:#000000");
+var text=(((maxSos/4)*(k+1)));
+if(text<10000)
+text=text.toString().slice(0,1);
+else
+text=text.toString().slice(0,2);
+canvas.createText(svg,margin+(150/4)*(k+1),20,text+"K","blue");
+}  
+canvas.createText(svg,8*margin,4*margin,"Sum of Sales","blue");
+}
 }
 
 }
-}
+
+

@@ -12,8 +12,8 @@
                "data":[
                   {
                      "product":"Amaretto",
-                     "sop":4000,
-                     "sos":10000
+                     "sop":20000,
+                     "sos":5000
                   },
                   {
                      "product":"Columbian",
@@ -58,7 +58,7 @@
                   {
                      "product":"Columbian",
                      "sop":8105,
-                     "sos":4011
+                     "sos":10011
                   },
                   {
                      "product":"Decaf Irish Cream",
@@ -208,7 +208,7 @@
                   {
                      "product":"Lemon",
                      "sop":25105,
-                     "sos":14011
+                     "sos":20000
                   },
                   {
                      "product":"Mint",
@@ -318,7 +318,7 @@
                   {
                      "product":"Green Tea",
                      "sop":5105,
-                     "sos":14011
+                     "sos":20000
                   }
                ]
             },
@@ -357,8 +357,8 @@
                   },
                   {
                      "product":"Green Tea",
-                     "sop":-5105,
-                     "sos":14011
+                     "sop":-10105,
+                     "sos":10000
                   }
                ]
             }
