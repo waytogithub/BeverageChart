@@ -26,11 +26,11 @@ Canvas.prototype.createLines=function(svg,x1,y1,x2,y2,style){
     //lineXY.setAttributeNS(null,"stroke-width",3);
     svg.appendChild(lineXY);
 };
-Canvas.prototype.createText = function(svg,x,y,textVal,textColor){
+Canvas.prototype.createText = function(svg,x,y,textVal,textColor,fontSize){
         var newText = document.createElementNS(this.url,"text");
             newText.setAttributeNS(null,"x",x);     
             newText.setAttributeNS(null,"y",y); 
-            newText.setAttributeNS(null,"font-size","13");
+            newText.setAttributeNS(null,"font-size",fontSize);
             newText.setAttributeNS(null,"text-anchor","middle");
             newText.setAttributeNS(null, "fill", textColor);
         var textNode = document.createTextNode(textVal);
