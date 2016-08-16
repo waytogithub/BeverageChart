@@ -91,22 +91,19 @@ else{
    else 
      return "#ff1919";
 }
-
 }
 function render(chartData,chartWidth,maxSos){
 var svgWidth=chartWidth/((chartData.dataset[0].values.length)+2);
-console.log(svgWidth);
-var gap=5;
-var margin=10;
-var rectHeight=18;
+var gap=5, margin=10,rectHeight=18,canvas,divId,svg,svgHeight,text;
+var sosVal,sopVal,maxSopSos,maxSopPos,maxSopNeg,col,width;
 var divisionX=svgWidth/maxSos;
 var url = "http://www.w3.org/2000/svg";
-var divId=document.getElementById("container");
-var canvas=new Canvas(url);
+divId=document.getElementById("container");
+canvas=new Canvas(url);
 //console.log((chartData.dataset[k].values.length)+1);
 for(var i=0;i<(chartData.dataset[0].values.length)+2;i++){
-var canvas=new Canvas(url);
-var svg=canvas.createSvg(svgWidth,100);
+canvas=new Canvas(url);
+svg=canvas.createSvg(svgWidth,100);
 divId.appendChild(svg);
 
 if(i==0)
@@ -128,9 +125,9 @@ canvas.createText(svg,5*margin,100-margin,chartData.dataset[0].values[i-2].zone,
 for(var k=0;k<((chartData.dataset.length));k++){
 
 for(var j=0;j<(chartData.dataset[k].values.length)+2;j++){
-var canvas=new Canvas(url);
-var svgHeight=(rectHeight*(chartData.dataset[k].values[0].data.length))+(2*margin)+((chartData.dataset[k].values[0].data.length)-1)*gap;
-var svg=canvas.createSvg(svgWidth,svgHeight);
+canvas=new Canvas(url);
+svgHeight=(rectHeight*(chartData.dataset[k].values[0].data.length))+(2*margin)+((chartData.dataset[k].values[0].data.length)-1)*gap;
+svg=canvas.createSvg(svgWidth,svgHeight);
 divId.appendChild(svg);
 canvas.createLines(svg,0,0,svgWidth,0,"stroke:#000000");
 if(j>0)
@@ -141,51 +138,48 @@ canvas.createLines(svg,svgWidth,0,svgWidth,svgHeight,"stroke:#000000");
 if((k==chartData.dataset.length)-1)
 canvas.createLines(svg,0,svgHeight,svgWidth,svgHeight,"stroke:#000000");    
 if(j==0 ){
-var text=new Canvas(url);
+text=new Canvas(url);
 text.createText(svg,50,50,chartData.dataset[k].productType,"blue",13);
 }
  
 if(j==1){
+var divY;
 for(var n=0;n<chartData.dataset[k].values[j].data.length;n++){  
-var text=new Canvas(url);
-var divY=(svgHeight/(chartData.dataset[k].values[j].data.length));
+text=new Canvas(url);
+divY=(svgHeight/(chartData.dataset[k].values[j].data.length));
 text.createText(svg,margin+80,(2*margin)+((divY-5)*n)+5,chartData.dataset[k].values[j].data[n].product,"blue",12);
 }
 }
 
 if(j>1){
  for(var i=0;i<chartData.dataset[k].values[j-2].data.length;i++){
- var sosVal=chartData.dataset[k].values[j-2].data[i].sos;
- var sopVal=chartData.dataset[k].values[j-2].data[i].sop;
+ sosVal=chartData.dataset[k].values[j-2].data[i].sos;
+ sopVal=chartData.dataset[k].values[j-2].data[i].sop;
  //console.log(sopVal);
- var maxSopSos=getMaxSopSos(chartData);
+ maxSopSos=getMaxSopSos(chartData);
  
- var maxSopPos=maxSopSos.maxSopPos;
- var maxSopNeg=maxSopSos.maxSopNeg;
- var col=getShade(sopVal,maxSopPos,maxSopNeg); 
+ maxSopPos=maxSopSos.maxSopPos;
+ maxSopNeg=maxSopSos.maxSopNeg;
+ col=getShade(sopVal,maxSopPos,maxSopNeg); 
  
- var width=divisionX*sosVal;
- var canvas=new Canvas(url);  
-canvas.createRectangle(svg,rectHeight,width,margin,(rectHeight*i)+margin+(gap*i),col);
-}
-
+ width=divisionX*sosVal;
+ canvas=new Canvas(url);  
+ canvas.createRectangle(svg,rectHeight,width,margin,(rectHeight*i)+margin+(gap*i),col);
  }
 }
-
+}
 }
 for(var i=0;i<(chartData.dataset[0].values.length)+2;i++){
-var canvas=new Canvas(url);
-var svg=canvas.createSvg(svgWidth,40);
+canvas=new Canvas(url);
+svg=canvas.createSvg(svgWidth,40);
 divId.appendChild(svg);
 if(i>1)
 canvas.createLines(svg,margin,0,margin,30,"stroke:#000000");
-console.log(maxSos);
-console.log(divisionX);
-console.log((maxSos/4));
+
 if(i>1){
 for(var k=0;k<3;k++){
 canvas.createLines(svg,margin+(svgWidth/4)*(k+1),0,margin+(svgWidth/4)*(k+1),5,"stroke:#000000");
-var text=(((maxSos/4)*(k+1)));
+text=(((maxSos/4)*(k+1)));
 if(text<10000)
 text=text.toString().slice(0,1);
 else
