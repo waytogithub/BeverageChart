@@ -19,7 +19,7 @@
    var xmlhttp= new XMLHttpRequest(),mychart;
      xmlhttp.onreadystatechange = function(){   
        if ( xmlhttp.readyState === 4 && xmlhttp.status === 200 ) {
-         mychart = new RenderChart(500,500,JSON.parse(xmlhttp.responseText));
+         mychart = new RenderChart(900,JSON.parse(xmlhttp.responseText));
          mychart.calSumTotal();
        }
  };
